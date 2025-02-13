@@ -21,7 +21,7 @@ A web application for searching books based on genre, viewing summaries, and int
 
 ### Prerequisites
 - Node.js (for Angular/React)
-- Python 3.8+
+- Python 3
 - SQLite
 - Ollama installed for running Llama 3 models
 
