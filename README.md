@@ -25,3 +25,9 @@ A web application for searching books based on genre, viewing summaries, and int
 - SQLite
 - Ollama installed for running Llama 3 models
 
+
+
+
+## Backend Endpoints
+
+- **/books**: Returns list of books
