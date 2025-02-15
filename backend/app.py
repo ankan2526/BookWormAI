@@ -17,9 +17,16 @@ def index():
 
 
 
-@app.route('/books')
+@app.route('/books', methods=['GET'])
 def get_books():
     books = db_helper.get_books(conn)
+    return flask.jsonify(books)
+
+
+@app.route('/books/search', methods=['POST'])
+def search_books():
+    data = flask.request.json
+    books = db_helper.search_books(conn, data['search'])
     return flask.jsonify(books)
 
 
