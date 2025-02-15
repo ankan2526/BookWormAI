@@ -31,3 +31,4 @@ A web application for searching books based on genre, viewing summaries, and int
 ## Backend Endpoints
 
 - **/books**: Returns list of books
+- **/books/search**: Returns list of books based on title
