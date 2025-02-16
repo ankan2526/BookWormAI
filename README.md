@@ -32,3 +32,4 @@ A web application for searching books based on genre, viewing summaries, and int
 
 - **/books**: Returns list of books
 - **/books/search**: Returns list of books based on title
+- **/llm/invoke**: Returns llm response based on the provided query
