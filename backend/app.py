@@ -1,13 +1,16 @@
 import flask, sqlite3
-from db_helper import DB_Helper
 from flask_cors import CORS
+from db_helper import DB_Helper
+from llm_helper import LLM_Helper
+from constants import DB_PATH, MODEL
 
 
 app = flask.Flask(__name__)
 CORS(app)
 
-conn = sqlite3.connect(r'/Users/ankanmahapatra/Desktop/genAI/BookWormAI/books.db', check_same_thread=False)
+conn = sqlite3.connect(DB_PATH, check_same_thread=False)
 db_helper = DB_Helper()
+llm_helper = LLM_Helper(MODEL)
 
 
 
@@ -28,6 +31,13 @@ def search_books():
     data = flask.request.json
     books = db_helper.search_books(conn, data['search'])
     return flask.jsonify(books)
+
+
+@app.route('/llm/invoke', methods=['POST'])
+def invoke_llm():
+    data = flask.request.json
+    result = llm_helper.invoke(data['query'])
+    return flask.jsonify(result)
 
 
 
