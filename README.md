@@ -11,9 +11,9 @@ A web application for searching books based on genre, viewing summaries, and int
 
 ## Tech Stack
 
-- **Frontend**: Angular / React
+- **Frontend**: Angular
 - **Backend**: Python (FastAPI / Flask)
-- **LLM**: Ollama models (Llama 3)
+- **LLM**: Ollama models (llama3.2)
 - **Vector Database**: ChromaDB
 - **Database**: SQLite
 
