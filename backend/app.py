@@ -3,7 +3,9 @@ from flask_cors import CORS
 from db_helper import DB_Helper
 from llm_helper import LLM_Helper
 from constants import DB_PATH, MODEL
+from dotenv import load_dotenv
 
+load_dotenv()
 
 app = flask.Flask(__name__)
 CORS(app)
