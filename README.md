@@ -33,8 +33,10 @@ A web application for searching books based on genre, viewing summaries, and int
   ```text
   LANGSMITH_TRACING=true
   LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
-  LANGSMITH_API_KEY="your_api_key"
+  LANGSMITH_API_KEY="langsmith_api_key"
   LANGSMITH_PROJECT="BookWormAI"
+  TAVILY_API_KEY="tavily_api_key"
+  GOOGLE_API_KEY="google_api_key"
   ```
 - Get your Langsmith API Key from [LangSmith](https://www.langchain.com/langsmith "Visit LangSmith's website") and place it in .env file in place of your_api_key.
 
