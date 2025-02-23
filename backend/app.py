@@ -1,7 +1,7 @@
 import flask, sqlite3
 from flask_cors import CORS
 from db_helper import DB_Helper
-from llm_helper import LLM_Helper
+import llm_helper
 from constants import DB_PATH, MODEL
 from dotenv import load_dotenv
 
@@ -12,7 +12,6 @@ CORS(app)
 
 conn = sqlite3.connect(DB_PATH, check_same_thread=False)
 db_helper = DB_Helper()
-llm_helper = LLM_Helper(MODEL)
 
 
 
@@ -38,7 +37,7 @@ def search_books():
 @app.route('/llm/invoke', methods=['POST'])
 def invoke_llm():
     data = flask.request.json
-    result = llm_helper.invoke(data['query'])
+    result = llm_helper.invoke(data['query'], 1)
     return flask.jsonify(result)
 
 
