@@ -1,20 +1,19 @@
-MODEL = "gemini-1.5-flash"
+MODEL = "gemini-2.0-flash"
 DB_PATH = r"/Users/ankanmahapatra/Desktop/genAI/BookWormAI/backend/books.db"
-DB_URI = "sqlite:///books.db"
+DB_URI = r"sqlite:////Users/ankanmahapatra/Desktop/genAI/BookWormAI/backend/books.db"
 LIMIT_ROWS = 10
 
 TEXT_TO_SQL_PROMPT = """
-Given an user query, create a syntactically correct {dialect} query that can be executed on the database.
-Unless the user specifies in their query a specific number of rows they wish to obtain, always limit the number of rows returned to {LIMIT_ROWS}.
+For a given user query, generate a one line SQLite query.
+User query: {user_query}
 
-Never query for all the colums from a specific table. Only ask for a few columns that are relevant to the user query.
+Database details:
+dialect: {dialect}
 
-Pay attention to the user query and try to understand what they are asking for. If the user query is ambiguous, ask for clarification.
-
-Only use the following tables:
+Table information:
 {table_info}
 
-Query: {query}
+Limit rows: {LIMIT_ROWS}
 
-Note: Only allow read operations on the database. Do not allow any write operations.
+One line SQLite query:
 """

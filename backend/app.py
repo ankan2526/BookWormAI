@@ -1,6 +1,6 @@
 import flask, sqlite3
 from flask_cors import CORS
-import db_helper
+from db_helper import DB_Helper
 import llm_helper
 from constants import DB_PATH, MODEL
 from dotenv import load_dotenv
@@ -25,6 +25,14 @@ try:
 except Exception as e:
     logger.error(f"Failed to connect to database: {str(e)}")
     raise
+
+db_helper = DB_Helper()
+
+
+
+@app.errorhandler(403)
+def forbidden(e):
+    return flask.jsonify({"error": f"Forbidden, {e}"}), 403
 
 
 @app.route('/')
@@ -67,7 +75,7 @@ def invoke_llm():
     logger.info(f"LLM invocation request with query: {query}")
     
     try:
-        result = llm_helper.invoke(query, 3)
+        result = llm_helper.invoke(query, 20)
         logger.info("LLM invocation successful")
         return flask.jsonify(result)
     except Exception as e:
