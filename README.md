@@ -13,7 +13,7 @@ A web application for searching books based on genre, viewing summaries, and int
 
 - **Frontend**: Angular
 - **Backend**: Python (FastAPI / Flask)
-- **LLM**: Ollama models (llama3.2)
+- **LLM**: Gemini-1.5-flash
 - **Langgraph**: To build agent with tools
 - **Vector Database**: ChromaDB
 - **Database**: SQLite
@@ -24,7 +24,6 @@ A web application for searching books based on genre, viewing summaries, and int
 - Node.js (for Angular)
 - Python 3
 - SQLite
-- Ollama installed for running Llama 3 models
 
 ### Setup
 

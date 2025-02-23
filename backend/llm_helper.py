@@ -12,4 +12,7 @@ class LLM_Helper:
         )
 
     def invoke(self, prompt):
-        return self.llm.invoke(prompt).content
+        try:
+            return self.llm.invoke(prompt).content
+        except Exception as e:
+            return str(e)
