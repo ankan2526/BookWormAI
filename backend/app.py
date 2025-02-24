@@ -75,7 +75,7 @@ def invoke_llm():
     logger.info(f"LLM invocation request with query: {query}")
     
     try:
-        result = llm_helper.invoke(query, 20)
+        result = llm_helper.invoke(query, 1)
         logger.info("LLM invocation successful")
         return flask.jsonify(result)
     except Exception as e:

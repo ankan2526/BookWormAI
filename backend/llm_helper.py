@@ -1,6 +1,5 @@
 import logging
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_ollama import ChatOllama
 from langchain_core.messages import SystemMessage, HumanMessage
 from langgraph.graph import START, StateGraph, MessagesState
 from langgraph.prebuilt import tools_condition, ToolNode
@@ -97,17 +96,15 @@ def search_tool(query: str) -> List:
         raise
 
 logger.info("Initializing LLM and tools")
-# llm = ChatGoogleGenerativeAI(
-#     model=MODEL,
-#     temperature=0,
-#     max_tokens=None,
-#     timeout=None,
-#     max_retries=2,
-# )
+llm = ChatGoogleGenerativeAI(
+    model=MODEL,
+    temperature=0,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2,
+)
 
-llm = ChatOllama(model="llama3.2")
-
-tools = [text_to_sqlite_query, execute_sqlite_query]
+tools = [text_to_sqlite_query, execute_sqlite_query, search_tool]
 
 llm_with_tools = llm.bind_tools(tools)
 
