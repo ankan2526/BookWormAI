@@ -1,32 +1,78 @@
+/* Navbar container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #d8b4fe;
-    padding: 15px 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #4f46e5;
-    text-decoration: none;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #3b82f6;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover, .nav-links a.active {
-    color: #1e40af;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6a5acd; /* Light purple */
+  padding: 0.3rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+/* Logo section */
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar title */
+.navbar h1 {
+  color: white;
+  margin-left: 1rem;
+  font-size: 1.8rem;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 200px;
+  border-radius: 0.5rem;
+}
+
+.search-bar button {
+  background-color: #4682b4; /* Light blue */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #5a9bd3;
+}
+
+/* Navbar items */
+.navbar-item {
+  margin-left: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+  color: #add8e6; /* Light blue hover effect */
+}
