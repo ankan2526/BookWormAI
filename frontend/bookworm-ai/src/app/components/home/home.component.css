@@ -1,0 +1,21 @@
+/* CSS for homepage */
+
+.navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #343a40;
+}
+
+.navbar__links {
+    color: #343a40;
+}
+
