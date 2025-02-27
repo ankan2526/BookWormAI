@@ -9,4 +9,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class NavbarComponent {
   searchTerm: string = '';
+  genre: string = 'Select a genre';
+
+  // Create a function to redirect to about page
+  aboutPage() {
+    window.location.href = '/about';
+  }
 }
