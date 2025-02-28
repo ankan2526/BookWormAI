@@ -2,7 +2,7 @@ import flask, sqlite3
 from flask_cors import CORS
 from db_helper import DB_Helper
 import llm_helper
-from constants import DB_PATH, MODEL
+from constants import DB_PATH
 from dotenv import load_dotenv
 import logging
 
