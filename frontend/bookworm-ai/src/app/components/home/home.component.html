@@ -5,4 +5,9 @@
     <input type="text" [placeholder]="placeholderText" [(ngModel)]="name">
     <!-- Get color from home.component.ts -->
     <h3 [style.color]="nameColor">Hello {{name}}</h3>
+    <button (click)="onClick()">
+        Press Here
+    </button>
+    <h3 *ngIf="switch" style="color: green;">ON</h3>
+    <h3 *ngIf="!switch" style="color: red;">OFF</h3>
 </div>
