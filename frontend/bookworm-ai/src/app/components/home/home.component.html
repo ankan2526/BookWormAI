@@ -10,4 +10,14 @@
     </button>
     <h3 *ngIf="switch" style="color: green;">ON</h3>
     <h3 *ngIf="!switch" style="color: red;">OFF</h3>
+
+    <!-- Create an input box to add books into bookList, add a submit button-->
+    <input type="text" [(ngModel)]="bookName">
+    <button (click)="add()">Add</button>
+
+    <br>
+    <ul>
+        <h3>Book List</h3>
+        <li *ngFor="let book of bookList">{{book}} <button (click)="remove(book)">(-)</button></li>
+    </ul>
 </div>
