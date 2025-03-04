@@ -20,4 +20,19 @@
         <h3>Book List</h3>
         <li *ngFor="let book of bookList">{{book}} <button (click)="remove(book)">❌</button></li>
     </ul>
+
+    <table border="black">
+        <thead>
+            <tr>
+                <th>S. No</th>
+                <th>Book Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of bookList; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{book}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
