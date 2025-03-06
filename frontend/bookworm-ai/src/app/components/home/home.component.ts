@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [NgIf, NgFor, FormsModule, NavbarComponent],
+  imports: [NgIf, NgFor, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

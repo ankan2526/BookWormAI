@@ -1,16 +1,22 @@
 <div class="navbar">
-    <div class="logo" onclick="">
-        <img src="assets/BookWormAI.jpeg" alt="BookWormAI" style="width: 4rem; height: 4rem;">
+    <div class="logo">
+        <a routerLink="home">
+            <img src="assets/BookWormAI.jpeg" alt="BookWormAI" style="width: 4rem; height: 4rem;">
+        </a>
     </div>
     <div>
-        <h1>BookWormAI</h1>
+        <a routerLink="home">
+            <h1>BookWormAI</h1>
+        </a>
     </div>
     <div class="search-bar">
         <input type="text" placeholder="Search for books" [(ngModel)]="searchTerm">
         <button>Search</button>
     </div>
     <div class="navbar-item">
-        <h3>Top Books</h3>
+        <a>
+            <h3>Top Books</h3>
+        </a>
     </div>
     <div class="navbar-item">
         <select name="genre" [value]="genre" [(ngModel)]="genre">
@@ -27,6 +33,10 @@
         <h2>Chat with AI</h2>
     </div>
     <div class="navbar-item">
-        <h4>About</h4>
+        <a routerLink="about">
+            <h4>About</h4>
+        </a>
     </div>
 </div>
+
+<router-outlet></router-outlet>
