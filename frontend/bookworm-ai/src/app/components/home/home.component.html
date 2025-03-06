@@ -21,7 +21,7 @@
         <li *ngFor="let book of bookList">{{book}} <button (click)="remove(book)">❌</button></li>
     </ul>
 
-    <table border="black">
+    <table [border]="nameColor">
         <thead>
             <tr>
                 <th>S. No</th>
