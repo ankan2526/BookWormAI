@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,12 @@ export class HomeComponent {
   switch: boolean = false;
   bookList: String[] = ["The Hunger Games", "And Then There Were None", "Atomic Habits"];
   bookName: String = '';
+
+  constructor(private http: HttpClient) {
+    this.http.get("http://127.0.0.1:5000/books").subscribe((result: any) => {
+      this.bookList = result;
+    });
+  }
 
   changeName(name: string) {
     this.name = name;
