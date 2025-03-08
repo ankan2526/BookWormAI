@@ -1,0 +1,15 @@
+<div class="chat-component">
+    <h2 class="bookworm-ai-header">BookWorm AI</h2>
+    <div class="messages">
+        <div *ngIf="messages.length == 0">
+            <h3>Hello, What can I help with?</h3>
+        </div>
+        <div *ngFor="let msg of messages" [ngClass]="{'user-msg': msg.sender === 'user', 'ai-msg': msg.sender === 'ai'}">
+            {{ msg.text }}
+        </div>
+    </div>
+    <div class="input-bar">
+        <input type="text" [(ngModel)]="userInput" placeholder="Type a message..." (keyup.enter)="sendMessage()" />
+    <button (click)="sendMessage()">Send</button>
+    </div>
+</div>
