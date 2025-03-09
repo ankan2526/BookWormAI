@@ -5,7 +5,7 @@
             <h3>Hello, What can I help with?</h3>
         </div>
         <div *ngFor="let msg of messages" [ngClass]="{'user-msg': msg.sender === 'user', 'ai-msg': msg.sender === 'ai'}">
-            {{ msg.text }}
+            <markdown> {{msg.text}} </markdown>
         </div>
     </div>
     <div class="input-bar">
