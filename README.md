@@ -39,6 +39,7 @@ A web application for searching books based on genre, viewing summaries, and int
   ```
 - Get your Langsmith API Key from [LangSmith](https://www.langchain.com/langsmith "Visit LangSmith's website") and place it in .env file in place of langsmith_api_key.
 - Get your Tavily API Key from [Tavily](https://tavily.com/ "Visit Tavily's website") and place it in .env file in place of tavily_api_key.
+- Get your Google Gemini 1.5 API Key from [Gemini](https://aistudio.google.com/apikey "Visit Google's AI Studio") and place it in .env file in place of google_api_key
 
 
 
